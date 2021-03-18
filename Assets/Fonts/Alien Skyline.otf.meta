@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: eb23ccbead987cb46b0b530bb1c0267f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Alien Skyline
+  fontNames:
+  - Alien Skyline
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b60e6153959c5ed4e95a86924b8422cb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
