@@ -5,10 +5,11 @@ using UnityEngine;
 public class CharacterConfigurations : MonoBehaviour
 {
     public GameObject[] spawns;
+    public AudioSource [] bu;
     // Start is called before the first frame update
     void Start()
     {
-        
+        bu = GetComponents<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class CharacterConfigurations : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemie"))
         {
-
+            bu[1].Play();
             gameObject.transform.position = spawns[Random.Range(0, 3)].transform.position;
 
 

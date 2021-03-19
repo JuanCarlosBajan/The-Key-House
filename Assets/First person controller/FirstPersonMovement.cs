@@ -10,13 +10,19 @@ public class FirstPersonMovement : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject LoadingScreen;
     public Image fadePanel;
-    
-    
+    public AudioSource mueble;
+    private void Start()
+    {
+        mueble = GetComponent<AudioSource>();
+    }
+
+
 
     void FixedUpdate()
     {
         if (PauseMenu.activeSelf == false)
         {
+            
             velocity.y = Input.GetAxis("Vertical") * speed * Time.deltaTime;
             velocity.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
             transform.Translate(velocity.x, 0, velocity.y);
@@ -40,7 +46,9 @@ public class FirstPersonMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("Obstaculo"))
         {
+            mueble.Play();
             transform.position = new Vector3(133f, 49f, 241f);
+            
         }
 
 
@@ -57,7 +65,7 @@ public class FirstPersonMovement : MonoBehaviour
         LoadingScreen.SetActive(true);
         while (!operation.isDone)
         {
-            //girar moneda
+            
             yield return null;
         }
 
@@ -65,6 +73,7 @@ public class FirstPersonMovement : MonoBehaviour
     }
 
     public void Darken(){
+        print("OSCURIDAD");
         StartCoroutine(FadeToBlack(1.0f));
     }
 

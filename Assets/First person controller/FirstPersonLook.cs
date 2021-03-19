@@ -203,7 +203,8 @@ public class FirstPersonLook : MonoBehaviour
                     AudioSource fff = hitinfo.collider.gameObject.GetComponent<AudioSource>();
                     fff.Play();
                     jumpscare.gameObject.SetActive(true);
-                    print("Carga escena");
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;                    
                     SceneManager.LoadScene(4);
                     loadscene("extra");
 
